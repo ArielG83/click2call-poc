@@ -1,0 +1,16 @@
+{
+    "wssServer": "ilsip.multi-travel.com",
+    "WebSocketPort": "443",
+    "ServerPath": "/ws",
+    "footer": "Powered by PayCall",
+    "C2C_AUTO_CALL_IN_HOUR": 0,
+    "SipUsername": "033818324",
+    "SipPassword": "6NeFm20q",
+    "callerName": "חייגן באתר הראל",
+    "toNumber": "97233818324",
+    "C2C_DTMF_NUMBER": "0",
+    "C2C_DTMF_DELAY_IN_MILISECONDS": 10000,
+    "C2C_DTMF_RETRY": "0",
+    "C2C_AUTO_CALL_IN_HOUR_AFTER_CALL_TIME_IN_SECOND": "0",
+    "C2C_MESSAGE_MODAL_CLOSE_IN_MILISECOND": 999000
+}

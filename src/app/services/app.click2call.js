@@ -4,7 +4,6 @@ import c2cstyle from "../style/click2call.css";
 const handleClickToCall = (phoneNumber, name) => {
   try {
     const basePath = `https://wapp.callindex.co.il/ClickToCall`;
-    console.log(basePath, 'basePath')
     const c2cConf = {
       ...config,
       callerName: name || config.callerName,
@@ -71,6 +70,7 @@ const handleClickToCall = (phoneNumber, name) => {
       console.log("config not found!");
       return;
     }
+
     let c2cTimer;
 
     //  add  css
@@ -78,17 +78,14 @@ const handleClickToCall = (phoneNumber, name) => {
     //  add ui
     document.body.innerHTML += c2cbtnUi;
 
-    let click2callButton = c2cGetElementById(clickToCallBtnIdPro);
-    let click2callBox = c2cGetElementById(clickToCallBoxPro);
-    let remoteAudio = c2cGetElementById(remoteAudioProEl);
-    let hangupButton = c2cGetElementById(c2cHangupBtnPro);
-    let callerName = c2cGetElementById(c2cCallTitlePro);
-    let callStatus = c2cGetElementById(c2cCallStatusPro);
-    let c2cFooterTxt = c2cGetElementById(c2cFooterTxtPro);
-    let c2cCallTimer = c2cGetElementById(c2cCallTimerPro);
-
-    // get element by id
-    const c2cGetElementById = (id) => document.getElementById(id);
+    let click2callButton = document.getElementById(clickToCallBtnIdPro);
+    let click2callBox = document.getElementById(clickToCallBoxPro);
+    let remoteAudio = document.getElementById(remoteAudioProEl);
+    let hangupButton = document.getElementById(c2cHangupBtnPro);
+    let callerName = document.getElementById(c2cCallTitlePro);
+    let callStatus = document.getElementById(c2cCallStatusPro);
+    let c2cFooterTxt = document.getElementById(c2cFooterTxtPro);
+    let c2cCallTimer = document.getElementById(c2cCallTimerPro);
 
     const c2cRinngerHandler = () => {
       try {
@@ -164,12 +161,7 @@ const handleClickToCall = (phoneNumber, name) => {
     };
 
     const getLocalStream = async () => {
-      console.log(navigator);
-
       if (navigator?.mediaDevices?.getUserMedia) {
-        console.log(
-          await navigator?.mediaDevices?.getUserMedia({ audio: true })
-        );
         return await new Promise((resolve, reject) => {
           navigator?.mediaDevices
             ?.getUserMedia({ audio: true })

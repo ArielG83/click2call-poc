@@ -1,4 +1,4 @@
-### CLICK2CALL POC
+# CLICK2CALL POC
 
 ## Installation
 

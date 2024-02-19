@@ -1,7 +1,6 @@
 import config from "../config/config.click2call.json";
-import c2cstyle from "../style/click2call.css";
 
-const handleClickToCall = (phoneNumber, name) => {
+const handleClickToCall = (phoneNumber, name, c2cstyle) => {
   try {
     const basePath = `https://wapp.callindex.co.il/ClickToCall`;
     const c2cConf = {

@@ -10,10 +10,8 @@ const Home = () => {
     const [name, setName] = useState('');
   
     const handleCLick = async () =>{
-      console.log('phoneNumber', phoneNumber, 'name', name)
       const isPhoneNumberActive = await activatePhoneNumber(phoneNumber) 
-      console.log('isPhoneNumberActive', isPhoneNumberActive)
-      if(isPhoneNumberActive || !phoneNumber){
+      if(isPhoneNumberActive){
         handleClickToCall(phoneNumber, name, c2cstyle)
       }
     }
